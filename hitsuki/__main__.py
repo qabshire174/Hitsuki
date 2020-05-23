@@ -144,7 +144,7 @@ def start(bot: Bot, update: Update, args: List[str]):
     else:
         try:
             update.effective_message.reply_text(
-                (tld(chat.id, "Halo guys! Saya masih aktif :3 PM saya jika kamu punya pertanyaan tentang saya!")))
+                (tld(chat.id, "PM Me If You Have Any Questions On How To Use Me!")))
         except:
             print("Nut")
 
@@ -158,15 +158,15 @@ def send_start(bot, update):
         pass
 
     chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = (tld(chat.id, "Halo guys! Nama saya *Frozen Bot* - Saya disini untuk membantumu mengatur grup!\nKlik tombol bantuan untuk mengetahui bagaimana cara menggunakan saya.\n\nIkuti [YasirPedia Channel](https://t.me/YasirPediaChannel) jika kamu ingin mendapatkan informasi seputar teknologi!\n\n"))
+    text = (tld(chat.id, "Hey *{}* , I'm *{}*"))
 
-    text += (tld(chat.id, "Bot ini di atur oleh [Yasir Aris M](tg://user?id={617426792})\n\nIngin memasukkanku ke grup? [Klik Disini!](t.me/YasirAssistant_bot?startgroup=true)"))
+    text += (tld(chat.id, "This Bot Is For Testing."))
 
-    keyboard = [[InlineKeyboardButton(text="📃 Channel Saya", url="https://t.me/YasirPediaChannel")]]
+    keyboard = [[InlineKeyboardButton(text="Master", url="https://t.me/Unknown_Hacker_X")]]
     keyboard = [[InlineKeyboardButton(text="Source Code", url="https://github.com/yasirarism/Hitsuki")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Control Panel", callback_data="cntrl_panel_M")]]
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Bahasa", callback_data="set_lang_"),
-                  InlineKeyboardButton(text="❔ Bantuan", callback_data="help_back")]]
+    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"),
+                  InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard),
                                         parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
