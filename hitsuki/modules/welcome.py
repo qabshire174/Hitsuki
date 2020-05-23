@@ -171,7 +171,7 @@ def new_member(bot: Bot, update: Update):
                     parse_mode=ParseMode.HTML
                 )
                 bot.send_message(chat.id,
-                                 "Thanks for adding me into your group! Don't forgot to checkout the HitaloSama's channel (@AndroidRepo)! And follow my news channel @HitsukiNews.")
+                                 "Thanks for adding me into your group!")
 
             else:
                 if is_user_gbanned(new_mem.id):
