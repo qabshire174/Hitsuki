@@ -119,7 +119,7 @@ def new_member(bot: Bot, update: Update):
     if isAllowed or user.id in SUDO_USERS:
         sql.whitelistChat(str(chat.id))
     else:
-        msg.reply_text("Thanks for adding me to your group! But this group is not whitelisted to use the bot, sorry.\n\nFollow my news channel. @HitsukiNews")
+        msg.reply_text("Thanks for adding me to your group!")
         bot.leave_chat(int(chat.id))
         return
 
